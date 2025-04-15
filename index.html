@@ -5,81 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDUSTRIAL TRAINING CENTER</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div id="background">
-        <div id="top">
-            <a href="mailto:reynardsiakunkuma@gmail.com" class="fa fa-envelope" style="text-decoration:none; color: white;">
-                reynardsiakunkuma@gmail.com
-            </a>
-            <a href="tel:+260 772566890" class="fa fa-phone" style="text-decoration:none; color: white;">
-                Call Us
-            </a>
-            <a href="https://www.facebook.com/itczambia?mibextid=ZbWKwL" class="fa fa-facebook" style="text-decoration:none; padding:7px; float:right; color: white;"></a>
-            <a href="https://www.instagram.com/yourprofile" class="fa fa-instagram" style="text-decoration:none; padding:7px; float:right; color: white;"></a>
-            <a href="https://www.twitter.com/yourprofile" class="fa fa-twitter" style="text-decoration:none; padding: 7px; float:right; color: white;"></a>
-            <a href="https://wa.me/+260772566890" class=" fa fa-whatsapp" style="color: rgb(248, 248, 248); padding:7px; float:right;"></a>
-        </div>
 
-        <div id="menu">
-            <div id="logo">ITC LIBRARY<b style="color:#2c7ad6 ;">ZONE</b></div>
-            <div id="menu1">
+    <!--Header details-->
+    <header>
+        <div class="header-details">
+            <!--Logo title-->
+            <div class="logo">
+                <h3>ITC LIBRARY ZONE</h3>
+            </div>
+            <!--Navigation Links-->
+            <div class="nav-links" id="on-large-screen"> 
                 <ul>
-                    <a href="#"><li class="fa fa-home">Home</li></a>
-                    <a href="#"><li class="fa fa-image">Gallery</li></a>
-                    <a href="admin.html"><li class="fa fa-user">Admin Login</li></a>
-                    <a href="register.html"><li class="fa fa-registered">Register</li></a>
-                    <a href="#"><li class="fa fa-user">Login</li></a>
+                    <li class="fa fa-home"><a href="#">Home</a></li>
+                    <li class="fa fa-image"><a href="#">Gallery</a></li>
+                    <li class="fa fa-user"><a href="admin.html">Admin Login</a></li>
+                    <li class="fa fa-registered"><a href="register.html">Register</a></li>
+                    <li class="fa fa-user"><a href="#">Login</a></li>
                 </ul>
-            </div>   
-        </div>
-
-        <div id="slider" style="background:url(itc.jpg) ;">
-            <div id="x">WELCOME TO INDUSTRIAL TRAINING CENTER LIBRARY<b style="color: #2c7ad6;">ZONE</b>
-            <p style="font-size: 15PX;"></p></div> 
-
-            <div id="y">
-                <div id="l">
-                    <h1 style=" text-align: center; color: #2c7ad6;">STUDENT</h1>
-                    <div id="student">
-                        <form action="your-backend-endpoint" method="POST">
-                            USER NAME <br><input type="text" class="t" name="username"/><br>
-                            PASSWORD <br><input type="password" class="t" name="password"/><br>
-                            <input type="submit" value="SAVE" style="border: none;width: 103%; height: 30px; background-color: #2c7ad6;">
-                        </form>
-                        <a href="#" style="color:blue; text-decoration: none;"><p>Forget password</p></a>
-                    </div>
-                </div>
-            </div> 
-
-            <div id="z">
-                <div id="r">
-                    <h1 style=" text-align: center; color: white;">LECTURER</h1>
-                    <div id="Teacher">
-                        <form action="your-backend-endpoint" method="POST">
-                            USER NAME <br><input type="text" class="t" name="username"/><br>
-                            PASSWORD <br><input type="password" class="t" name="password"/><br>
-                            <input type="submit" value="SAVE" style="border:none;width: 103%; height: 30px; background-color: white;">
-                        </form>
-                        <a href="#" style="color:white; text-decoration: none;"><p>Forget password</p></a>
-                    </div>
-                </div>
+            </div>  
+            
+            <div> 
+                <i class="fa fa-bars" id="on-mobile-menu" onclick="menuBar()"></i>
+                <i class="fa fa-times" id="close-menu" onclick="closeMenu()"></i>
             </div> 
         </div>
 
-        <div id="down">
+        <div id="on-mobile-screen">
+            <ul>
+                <li class="fa fa-home"><a href="#">Home</a></li>
+                <li class="fa fa-image"><a href="#">Gallery</a></li>
+                <li class="fa fa-user"><a href="#">Login</a></li>
+            </ul>
+        </div>
+        <!--Call to action title-->
+        <div class="title">
+            <h3>WELCOME TO INDUSTRIAL TRAINING CENTER LIBRARY ZONE</h3>
+        </div>
+    </header>
+
+    <!--Main Content-->
+    <main class="container">
+        <section class="login-forms">
+           <!--User Login-->
+            <div class="user-login">
+                <div class="user-container">
+                    <h1>Login As Student</h1>
+                    <div class="user-form">
+                        <form action="your-backend-endpoint" method="POST">
+                            <!--Username-->
+                            <div class="details">
+                                <label for="">User Name</label>
+                                <input type="text" name="username" id="username" placeholder="Enter your username...">
+                            </div>
+                            <!--Password-->
+                            <div class="details">
+                                <label for="">Password</label>
+                                <input type="password" name="password" id="password" placeholder="Enter your password...">
+                            </div>
+                            <button>Login</button>
+                        </form>
+                        <p>Forget password?<a href="#">recover</a> </p>
+                    </div>
+                </div>
+            </div> 
+            <!--Admin Login-->
+            <div class="admin-login">
+                <div class="admin-container">
+                    <h1>Login As Lecturer</h1>
+                    <div class="admin-form">
+                        <form action="your-backend-endpoint" method="POST">
+                            <!--Username-->
+                            <div class="details">
+                                <label for="">User Name</label>
+                                <input type="text" name="username" id="username" placeholder="Enter your username...">
+                            </div>
+                            <!--Password-->
+                            <div class="details">
+                                <label for="">Password</label>
+                                <input type="password" name="password" id="password" placeholder="Enter your password...">
+                            </div>
+                            <button>Login</button>
+                        </form>
+                        <p>Forget password?<a href="#">recover</a> </p>
+                    </div>
+                </div>
+            </div> 
+        </section>
+    </main> 
+    
+    <!--Footer details-->
+    <footer class="footer-details">
+        <div class="footer-top">
+            <!--Social Media links-->
+        <div class="social-media-links">
             <h3>Stay Connected</h3>
-            <a href="https://www.facebook.com/yourprofile" class="fa fa-facebook" style="text-decoration: none; padding: 10px 12px;color: white;"></a>
-            <a href="https://www.instagram.com/yourprofile" class="fa fa-instagram" style="text-decoration: none; padding: 10px 12px;color: white;"></a>
-            <a href="https://www.twitter.com/yourprofile" class="fa fa-twitter" style="text-decoration: none; padding: 10px 12px;color: white;"></a>
-            <h2>Contact Address</h2>
-            <a href="https://www.google.com/maps/place/ITC+buyantashi+road" class="fa fa-home" style="text-decoration: none; padding: 10px 12px;color: white;"> ITC Buyantashi road</a><br>
-            <a href="tel:+260211247718" class="fa fa-phone" style="text-decoration: none; padding: 10px 12px;color: white;"> 0211 247718 </a><br>
-            <a href="mailto:reynardsiakunkuma@gmail.com" class="fa fa-envelope" style="text-decoration: none; padding: 10px 12px; color:white;"> reynardsiakunkuma@gmail.com </a>
+            <div class="links">
+                <a href="https://www.facebook.com/yourprofile" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/yourprofile" class="fa fa-instagram"></a>
+                <a href="https://www.twitter.com/yourprofile" class="fa fa-twitter"></a>
+            </div>
         </div>
-        <div class="footer">Developed By: Reynard Siakunkuma </div>
-    </div>
+        <!--contact links-->
+        <div class="contact-links">
+            <h3>Contact Address</h3>
+            <div class="links">
+                <a href="https://www.google.com/maps/place/ITC+buyantashi+road" class="fa fa-home"> ITC Buyantashi road</a><br>
+                <a href="tel:+260211247718" class="fa fa-phone"> 0211 247718 </a><br>
+                <a href="mailto:reynardsiakunkuma@gmail.com" class="fa fa-envelope"> reynardsiakunkuma@gmail.com </a>
+            </div>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Developed By: Reynard Siakunkuma</p>
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
 </body>
+
+
 </html>
